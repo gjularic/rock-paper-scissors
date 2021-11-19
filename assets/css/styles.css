@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 * {
@@ -13,4 +13,20 @@
     height: 100vh;
     width: 100%;
     background: linear-gradient(#F3C94C, #e0ac11);
+    position: relative;
+}
+
+/* Logo section */
+
+#logo {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 80px;
+    color: #fff;
+    margin-top: 40px;
 }
