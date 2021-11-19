@@ -110,3 +110,20 @@
 .clickOption:hover {
     box-shadow:  0 8px 15px 0 rgba(51, 51, 51, 0.6);
 }
+
+/* Result section */
+
+#result {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Asap', sans-serif;
+    font-size: 35px;
+    color: #fff;
+    top: 65%;
+    flex-flow: row wrap;
+    text-align: center;
+}
