@@ -65,3 +65,15 @@
     color: #fff;
     margin: 0 7px;
 }
+
+/* Select option area for the player */
+
+#selectOption {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    top: 50%
+}
