@@ -28,5 +28,20 @@
     font-family: 'Bebas Neue', cursive;
     font-size: 80px;
     color: #fff;
-    margin-top: 40px;
+    margin-top: 25px;
+    flex-flow: row wrap;
 }
+
+/* Player and Computer score section */
+
+#score {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 225px;
+}
+
