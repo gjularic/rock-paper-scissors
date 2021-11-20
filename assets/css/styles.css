@@ -170,3 +170,47 @@
         font-size: 28px;
     }
 }
+
+/* For screens 400px wide or less */
+
+@media screen and (max-width: 400px) {
+
+    #logo {
+        font-size: 55px;
+        text-align: center;
+    }
+
+    #score {
+        padding: 10px;
+        margin-top: 150px;
+    }
+
+    #player, #computer {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #playerScore, #divider, #computerScore {
+        font-size: 55px;
+    }
+
+    #selectOption {
+        height: 150px;
+    }
+
+    .clickOption {
+        width: 70px;
+        height: 70px;
+        margin: 10px 10px;
+    }
+    
+    .clickOption i {
+        width: 70px;
+        height: 70px;
+        font-size: 35px;
+    }
+
+    #result {
+        font-size: 24px;
+    }
+}
