@@ -4,6 +4,9 @@ let playerGameScore = document.getElementById("playerScore");
 let computerGameScore = document.getElementById("computerScore");
 const selectOption = document.querySelectorAll(".clickOption");
 let gameResultShow = document.getElementById("result");
+let playerOption
+let computerOption
+
 
 /*
 Function to add event listeners
@@ -29,5 +32,22 @@ for (let option of selectOption) {
         }
         */
         console.log(playerOption);
+        compRandomOption();
     })
+}
+
+/*
+Function to get the random number
+and attach it to string
+*/
+function compRandomOption () {
+    const randomNumber = Math.floor(Math.random() * 3);
+    if (randomNumber === 0) {
+        computerOption = "rock";
+    } else if (randomNumber === 1) {
+        computerOption = "paper";
+    } else {
+        computerOption = "scissors";
+    }
+    console.log(computerOption);
 }
