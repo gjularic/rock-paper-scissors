@@ -31,10 +31,12 @@ for (let option of selectOption) {
             playerOption = 2;
         }
         */
-        console.log(playerOption);
+        // console.log(playerOption);
         compRandomOption();
+        gameResult();
     })
 }
+
 
 /*
 Function to get the random number
@@ -49,5 +51,28 @@ function compRandomOption () {
     } else {
         computerOption = "scissors";
     }
-    console.log(computerOption);
+    // console.log(computerOption);
+}
+
+
+/*
+Function to compare the picks
+and display the winner
+*/
+function gameResult () {
+    if (playerOption === computerOption) {
+        gameResultShow.innerHTML = "You both picked the same, <br>it's a DRAW!"
+    } else if (playerOption === "rock" && computerOption === "scissors") {
+        gameResultShow.innerHTML = "You picked Rock, <br>Computer picked Scissors. <br>YOU WON!"
+    } else if (playerOption === "scissors" && computerOption === "rock") {
+        gameResultShow.innerHTML = "You picked Scissors, <br>Computer picked Rock. <br>YOU LOST!"
+    } else if (playerOption === "paper" && computerOption === "rock") {
+        gameResultShow.innerHTML = "You picked Paper, <br>Computer picked Rock. <br>YOU WON!"
+    } else if (playerOption === "rock" && computerOption === "paper") {
+        gameResultShow.innerHTML = "You picked Rock, <br>Computer picked Paper. <br>YOU LOST!"
+    } else if (playerOption === "scissors" && computerOption === "paper") {
+        gameResultShow.innerHTML = "You picked Scissors, <br>Computer picked Paper. <br>YOU WON!"
+    } else {
+        gameResultShow.innerHTML = "You picked Paper, <br>Computer picked Scissors. <br>YOU LOST!"
+    }
 }
