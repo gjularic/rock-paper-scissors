@@ -6,6 +6,8 @@ const selectOption = document.querySelectorAll(".clickOption");
 let gameResultShow = document.getElementById("result");
 let playerOption
 let computerOption
+let playerScoreNum = 0;
+let computerScoreNum = 0;
 
 
 /*
@@ -56,23 +58,34 @@ function compRandomOption () {
 
 
 /*
-Function to compare the picks
-and display the winner
+Function to compare the picks,
+adjust the score and display the winner
 */
 function gameResult () {
     if (playerOption === computerOption) {
         gameResultShow.innerHTML = "You both picked the same, <br>it's a DRAW!"
     } else if (playerOption === "rock" && computerOption === "scissors") {
         gameResultShow.innerHTML = "You picked Rock, <br>Computer picked Scissors. <br>YOU WON!"
+        playerScoreNum += 1;
     } else if (playerOption === "scissors" && computerOption === "rock") {
         gameResultShow.innerHTML = "You picked Scissors, <br>Computer picked Rock. <br>YOU LOST!"
+        computerScoreNum += 1;
     } else if (playerOption === "paper" && computerOption === "rock") {
         gameResultShow.innerHTML = "You picked Paper, <br>Computer picked Rock. <br>YOU WON!"
+        playerScoreNum += 1;
     } else if (playerOption === "rock" && computerOption === "paper") {
         gameResultShow.innerHTML = "You picked Rock, <br>Computer picked Paper. <br>YOU LOST!"
+        computerScoreNum += 1;
     } else if (playerOption === "scissors" && computerOption === "paper") {
         gameResultShow.innerHTML = "You picked Scissors, <br>Computer picked Paper. <br>YOU WON!"
+        playerScoreNum += 1;
     } else {
         gameResultShow.innerHTML = "You picked Paper, <br>Computer picked Scissors. <br>YOU LOST!"
+        computerScoreNum += 1;
     }
+
+    /* Player and computer game score changed to integers */
+    playerGameScore.innerText = playerScoreNum;
+    computerGameScore.innerText = computerScoreNum;
+
 }
