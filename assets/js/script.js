@@ -36,6 +36,7 @@ for (let option of selectOption) {
         // console.log(playerOption);
         compRandomOption();
         gameResult();
+        restartGame();
     })
 }
 
@@ -88,4 +89,22 @@ function gameResult () {
     playerGameScore.innerText = playerScoreNum;
     computerGameScore.innerText = computerScoreNum;
 
+}
+
+/*
+Function checks who has scored 10 points first,
+displays corresponding text and restart button
+that will reload the whole page
+*/
+function restartGame () {
+    if (playerScoreNum === 10) {
+        document.getElementById("gameContainer").innerHTML = "<div id='restartWin'>You were first to score 10 points! You Won the Game! Click 'Play again' to restart.<button class='restart-btn'>Play Again</button></div>";
+    }
+    if (computerScoreNum === 10) {
+        document.getElementById("gameContainer").innerHTML = "<div id='restartLoss'>Computer was first to score 10 points! You Lost the Game! Click 'Play again' to restart.<button class='restart-btn'>Play Again</button></div>";
+    }
+    document.querySelector('.restart-btn').addEventListener('click', function(){
+        window.location.reload();
+        return false;
+      });
 }
