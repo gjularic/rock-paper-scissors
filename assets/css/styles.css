@@ -189,7 +189,8 @@
     }
 
     #player, #computer {
-        font-size: 20px;
+        font-size: 15px;
+        width: 100px;
     }
 
     #playerScore, #divider, #computerScore {
@@ -214,6 +215,11 @@
     #result {
         font-size: 28px;
     }
+
+    .restartGameWrap {
+        width: 70%;
+        font-size: 30px;
+    }
 }
 
 /* For screens 400px wide or less */
@@ -221,7 +227,7 @@
 @media screen and (max-width: 400px) {
 
     #logo {
-        font-size: 55px;
+        font-size: 45px;
         text-align: center;
     }
 
@@ -231,7 +237,7 @@
     }
 
     #player, #computer {
-        font-size: 20px;
+        font-size: 15px;
         text-align: center;
     }
 
@@ -257,5 +263,19 @@
 
     #result {
         font-size: 24px;
+    }
+
+    .restartGameWrap {
+        width: 80%;
+        font-size: 25px;
+    }
+}
+
+/* For screens 300px wide or less */
+
+@media screen and (max-width: 300px) {
+
+    #player, #computer {
+        font-size: 12px;
     }
 }
