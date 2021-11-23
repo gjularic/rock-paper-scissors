@@ -17,26 +17,12 @@ to each option selected by the player
 for (let option of selectOption) {
     option.addEventListener("click", function(event) {
 
-        /*
-        Used this option when I noticed that parentNode
-        needs to be selected in order to get the id-s
-        */
         playerOption = event.target.parentNode.id;
 
-        /*
-        playerOption = event.target.className;
-        if (playerOption === "fas fa-hand-rock") {
-            playerOption = 0;
-        } else if (playerOption === "fas fa-hand-paper") {
-            playerOption = 1;
-        } else {
-            playerOption = 2;
-        }
-        */
-        // console.log(playerOption);
         compRandomOption();
         gameResult();
         restartGame();
+
     })
 }
 
@@ -46,6 +32,7 @@ Function to get the random number
 and attach it to string
 */
 function compRandomOption () {
+
     const randomNumber = Math.floor(Math.random() * 3);
     if (randomNumber === 0) {
         computerOption = "rock";
@@ -54,7 +41,7 @@ function compRandomOption () {
     } else {
         computerOption = "scissors";
     }
-    // console.log(computerOption);
+
 }
 
 
@@ -63,6 +50,7 @@ Function to compare the picks,
 adjust the score and display the winner
 */
 function gameResult () {
+
     if (playerOption === computerOption) {
         gameResultShow.innerHTML = "You both picked the same, <br>it's a DRAW!"
     } else if (playerOption === "rock" && computerOption === "scissors") {
@@ -97,14 +85,18 @@ displays corresponding text and restart button
 that will reload the whole page
 */
 function restartGame () {
+
     if (playerScoreNum === 10) {
         document.getElementById("gameContainer").innerHTML = "<div class='restartGameWrap'><div id='restartWin'>You were first to score 10 points! You Won the Game! Click 'Play again' to restart.</div><button class='restart-btn'>Play Again</button></div>";
     }
+
     if (computerScoreNum === 10) {
         document.getElementById("gameContainer").innerHTML = "<div class='restartGameWrap'><div id='restartLoss'>Computer was first to score 10 points! You Lost the Game! Click 'Play again' to restart.</div><button class='restart-btn'>Play Again</button></div>";
     }
+
     document.querySelector('.restart-btn').addEventListener('click', function(){
         window.location.reload();
         return false;
       });
+      
 }
