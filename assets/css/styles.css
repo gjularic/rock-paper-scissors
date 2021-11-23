@@ -158,6 +158,21 @@
     color: #e72f22;
 }
 
+.restart-btn {
+    border: none;
+    background-color: #169c21;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 6px;
+    box-shadow:  0 2px 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.restart-btn:hover {
+    background-color: #fff;
+    color: #169c21;
+}
+
 /* Media queries */
 
 /* For screens 650px wide or less */
