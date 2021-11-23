@@ -98,10 +98,10 @@ that will reload the whole page
 */
 function restartGame () {
     if (playerScoreNum === 10) {
-        document.getElementById("gameContainer").innerHTML = "<div id='restartWin'>You were first to score 10 points! You Won the Game! Click 'Play again' to restart.<button class='restart-btn'>Play Again</button></div>";
+        document.getElementById("gameContainer").innerHTML = "<div class='restartGameWrap'><div id='restartWin'>You were first to score 10 points! You Won the Game! Click 'Play again' to restart.</div><button class='restart-btn'>Play Again</button></div>";
     }
     if (computerScoreNum === 10) {
-        document.getElementById("gameContainer").innerHTML = "<div id='restartLoss'>Computer was first to score 10 points! You Lost the Game! Click 'Play again' to restart.<button class='restart-btn'>Play Again</button></div>";
+        document.getElementById("gameContainer").innerHTML = "<div class='restartGameWrap'><div id='restartLoss'>Computer was first to score 10 points! You Lost the Game! Click 'Play again' to restart.</div><button class='restart-btn'>Play Again</button></div>";
     }
     document.querySelector('.restart-btn').addEventListener('click', function(){
         window.location.reload();
