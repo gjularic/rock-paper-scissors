@@ -4,8 +4,8 @@ let playerGameScore = document.getElementById("playerScore");
 let computerGameScore = document.getElementById("computerScore");
 const selectOption = document.querySelectorAll(".clickOption");
 let gameResultShow = document.getElementById("result");
-let playerOption
-let computerOption
+let playerOption;
+let computerOption;
 let playerScoreNum = 0;
 let computerScoreNum = 0;
 
@@ -23,7 +23,7 @@ for (let option of selectOption) {
         gameResult();
         restartGame();
 
-    })
+    });
 }
 
 
@@ -52,24 +52,24 @@ adjust the score and display the winner
 function gameResult () {
 
     if (playerOption === computerOption) {
-        gameResultShow.innerHTML = "You both picked the same, <br>it's a DRAW!"
+        gameResultShow.innerHTML = "You both picked the same, <br>it's a DRAW!";
     } else if (playerOption === "rock" && computerOption === "scissors") {
-        gameResultShow.innerHTML = "You picked Rock, <br>Computer picked Scissors. <br>YOU WON!"
+        gameResultShow.innerHTML = "You picked Rock, <br>Computer picked Scissors. <br>YOU WON!";
         playerScoreNum += 1;
     } else if (playerOption === "scissors" && computerOption === "rock") {
-        gameResultShow.innerHTML = "You picked Scissors, <br>Computer picked Rock. <br>YOU LOST!"
+        gameResultShow.innerHTML = "You picked Scissors, <br>Computer picked Rock. <br>YOU LOST!";
         computerScoreNum += 1;
     } else if (playerOption === "paper" && computerOption === "rock") {
-        gameResultShow.innerHTML = "You picked Paper, <br>Computer picked Rock. <br>YOU WON!"
+        gameResultShow.innerHTML = "You picked Paper, <br>Computer picked Rock. <br>YOU WON!";
         playerScoreNum += 1;
     } else if (playerOption === "rock" && computerOption === "paper") {
-        gameResultShow.innerHTML = "You picked Rock, <br>Computer picked Paper. <br>YOU LOST!"
+        gameResultShow.innerHTML = "You picked Rock, <br>Computer picked Paper. <br>YOU LOST!";
         computerScoreNum += 1;
     } else if (playerOption === "scissors" && computerOption === "paper") {
-        gameResultShow.innerHTML = "You picked Scissors, <br>Computer picked Paper. <br>YOU WON!"
+        gameResultShow.innerHTML = "You picked Scissors, <br>Computer picked Paper. <br>YOU WON!";
         playerScoreNum += 1;
     } else {
-        gameResultShow.innerHTML = "You picked Paper, <br>Computer picked Scissors. <br>YOU LOST!"
+        gameResultShow.innerHTML = "You picked Paper, <br>Computer picked Scissors. <br>YOU LOST!";
         computerScoreNum += 1;
     }
 
