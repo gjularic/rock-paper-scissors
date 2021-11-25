@@ -69,10 +69,10 @@ where the score has been reset.
 - *[Font Awesome](https://fontawesome.com/)*
 - *[Google Fonts](https://fonts.google.com/)*
 - *[Chrome DevTools](https://developer.chrome.com/docs/devtools/)*
-- *[W3C Markup Validation Service](validator.w3.org)*
+- *[W3C Markup Validation Service](https://validator.w3.org)*
 - *[CSS Validator](https://jigsaw.w3.org/css-validator)*
 - *[JSHint](https://jshint.com/)*
-- *[Multi Device Mockup Generator](https://https://websitemockupgenerator.com/)*
+- *[Multi Device Mockup Generator](https://websitemockupgenerator.com/)*
 
 
 ---
